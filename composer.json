@@ -1,0 +1,82 @@
+{
+    "name": "itinerisltd/preflight-extra",
+    "type": "wp-cli-package",
+    "description": "Extra preflight-command checkers for professional developers.",
+    "keywords": [
+        "wordpress",
+        "wp",
+        "wp-cli",
+        "preflight",
+        "checklist"
+    ],
+    "homepage": "https://github.com/ItinerisLtd/preflight-extra",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Itineris Limited",
+            "email": "hello@itineris.co.uk",
+            "homepage": "https://itineris.co.uk/",
+            "role": "Company"
+        },
+        {
+            "name": "Tang Rufus",
+            "email": "tangrufus@gmail.com",
+            "homepage": "https://typist.tech/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "itinerisltd/preflight-command": "^0.4.0",
+        "wp-cli/extension-command": "^2.0",
+        "wp-cli/package-command": "^2.0",
+        "wp-cli/wp-cli": "^2.0"
+    },
+    "require-dev": {
+        "10up/wp_mock": "^0.3.0",
+        "automattic/vipwpcs": "dev-master",
+        "codeception/base": "^2.4",
+        "mockery/mockery": "^1.1",
+        "roave/security-advisories": "dev-master",
+        "wp-coding-standards/wpcs": "^1.0"
+    },
+    "config": {
+        "preferred-install": {
+            "itinerisltd/preflight-command": "source"
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Itineris\\Preflight\\Extra\\": "src/",
+            "Itineris\\Preflight\\Test\\": "vendor/itinerisltd/preflight-command/tests/unit/"
+        },
+        "files": [
+            "command.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Itineris\\Preflight\\Extra\\Test\\": "tests/unit/"
+        }
+    },
+    "prefer-stable": true,
+    "scripts": {
+        "check-style": "phpcs --standard=ruleset.xml --colors -p -s",
+        "pretag": [
+            "composer normalize",
+            "github_changelog_generator --no-verbose"
+        ],
+        "test": "codecept run"
+    },
+    "support": {
+        "email": "hello@itineris.co.uk",
+        "issues": "https://github.com/ItinerisLtd/preflight-extra/issues",
+        "source": "https://github.com/ItinerisLtd/preflight-extra"
+    }
+}
