@@ -4,13 +4,17 @@ declare(strict_types=1);
 namespace Itineris\Preflight\Extra\Checkers;
 
 use Itineris\Preflight\Checkers\AbstractChecker;
+use Itineris\Preflight\Checkers\Traits\ValidatorAwareTrait;
 use Itineris\Preflight\Config;
 use Itineris\Preflight\Extra\Validators\StatusCodes;
 use Itineris\Preflight\ResultFactory;
 use Itineris\Preflight\ResultInterface;
+use Itineris\Preflight\Validators\AbstractValidator;
 
 class ExpectedStatusCodes extends AbstractChecker
 {
+    use ValidatorAwareTrait;
+
     public const ID = 'expected-status-codes';
     public const DESCRIPTION = '**Experimental** Ensure paths return expected status codes.';
 
@@ -34,14 +38,13 @@ class ExpectedStatusCodes extends AbstractChecker
         $results = array_map(function (array $group): ResultInterface {
             $code = (int) $group['code'] ?? 200;
 
-            $validator = new StatusCodes($this, '');
-            $validator->setExpectedStatusCode($code);
+            $this->validator->setExpectedStatusCode($code);
 
             $urls = array_map(function (string $path): string {
                 return home_url($path);
             }, $group['paths'] ?? []);
 
-            return $validator->validate(...$urls);
+            return $this->validator->validate(...$urls);
         }, $groups);
 
         // TODO: Method to merge results? Or, allow returning multiple results?
@@ -62,5 +65,17 @@ class ExpectedStatusCodes extends AbstractChecker
         }
 
         return ResultFactory::makeSuccess($this);
+    }
+
+    /**
+     * Returns a default validator instance.
+     *
+     * Used by the constructor.
+     *
+     * @return AbstractValidator
+     */
+    protected function makeDefaultValidator(): AbstractValidator
+    {
+        return new StatusCodes($this, '');
     }
 }
