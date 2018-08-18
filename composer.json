@@ -53,8 +53,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Itineris\\Preflight\\Extra\\": "src/",
-            "Itineris\\Preflight\\Test\\": "vendor/itinerisltd/preflight-command/tests/unit/"
+            "Itineris\\Preflight\\Extra\\": "src/"
         },
         "files": [
             "command.php"
@@ -62,6 +61,7 @@
     },
     "autoload-dev": {
         "psr-4": {
+            "Itineris\\Preflight\\Test\\": "vendor/itinerisltd/preflight-command/tests/unit/",
             "Itineris\\Preflight\\Extra\\Test\\": "tests/unit/"
         }
     },
