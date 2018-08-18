@@ -10,6 +10,56 @@ Extra [preflight-command](https://github.com/ItinerisLtd/preflight-command) chec
 
 TODO: Write the readme!
 
+### Installation
+
+```bash
+$ wp package install itinerisltd/preflight-extra:@stable
+```
+
+### preflight.toml
+
+```toml
+# Note: expected-status-codes is experimental.
+[expected-status-codes]
+enabled = true # Default is enabled.
+[[expected-status-codes.groups]]
+  code = 404
+  paths = [
+    '/not-found',
+  ]
+[[expected-status-codes.groups]]
+  code = 200
+  paths = [
+    '/',
+    '/hello-world',
+  ]
+
+[production-home-url]
+url = 'https://example.com'
+
+[production-site-url]
+url = 'https://example.com/wp' # Maybe same as homr URL
+
+[required-constants]
+includes = [
+  'WP_ENV',
+  'MY_CONSTANT_A',
+  'MY_CONSTANT_B',
+]
+
+[required-packages]
+includes = [
+  'aaemnnosttv/wp-cli-login-command',
+  'itinerisltd/preflight-yoast-seo',
+]
+
+[required-plugins]
+includes = [
+  'sunny',
+  'wp-cloudflare-guard',
+]
+```
+
 ### For Itineris Team
 
 ```bash

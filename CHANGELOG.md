@@ -1,8 +1,17 @@
 # Change Log
 
-## [0.1.0](https://github.com/ItinerisLtd/preflight-extra/tree/0.1.0) (2018-08-19)
+## [0.1.1](https://github.com/ItinerisLtd/preflight-extra/tree/0.1.1) (2018-08-19)
+[Full Changelog](https://github.com/ItinerisLtd/preflight-extra/compare/0.1.0...0.1.1)
+
 **Merged pull requests:**
 
+- Composer: Fix autoload [\#5](https://github.com/ItinerisLtd/preflight-extra/pull/5) ([TangRufus](https://github.com/TangRufus))
+- Delete CONTRIBUTING.md [\#4](https://github.com/ItinerisLtd/preflight-extra/pull/4) ([TangRufus](https://github.com/TangRufus))
+
+## [0.1.0](https://github.com/ItinerisLtd/preflight-extra/tree/0.1.0) (2018-08-18)
+**Merged pull requests:**
+
+- Version bump 0.1.0 [\#3](https://github.com/ItinerisLtd/preflight-extra/pull/3) ([TangRufus](https://github.com/TangRufus))
 - ExpectedStatusCodes: Use ValidatorAwareTrait [\#2](https://github.com/ItinerisLtd/preflight-extra/pull/2) ([TangRufus](https://github.com/TangRufus))
 
 
