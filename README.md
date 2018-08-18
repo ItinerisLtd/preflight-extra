@@ -38,7 +38,7 @@ enabled = true # Default is enabled.
 url = 'https://example.com'
 
 [production-site-url]
-url = 'https://example.com/wp' # Maybe same as homr URL
+url = 'https://example.com/wp' # Maybe same as home URL
 
 [required-constants]
 includes = [
