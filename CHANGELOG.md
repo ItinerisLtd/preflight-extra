@@ -1,10 +1,19 @@
 # Change Log
 
-## [0.1.1](https://github.com/ItinerisLtd/preflight-extra/tree/0.1.1) (2018-08-19)
+## [0.2.0](https://github.com/ItinerisLtd/preflight-extra/tree/0.2.0) (2018-08-20)
+[Full Changelog](https://github.com/ItinerisLtd/preflight-extra/compare/0.1.1...0.2.0)
+
+**Merged pull requests:**
+
+- Prefix all check IDs with `extra-` [\#8](https://github.com/ItinerisLtd/preflight-extra/pull/8) ([TangRufus](https://github.com/TangRufus))
+- Readme: Fix typo [\#7](https://github.com/ItinerisLtd/preflight-extra/pull/7) ([TangRufus](https://github.com/TangRufus))
+
+## [0.1.1](https://github.com/ItinerisLtd/preflight-extra/tree/0.1.1) (2018-08-18)
 [Full Changelog](https://github.com/ItinerisLtd/preflight-extra/compare/0.1.0...0.1.1)
 
 **Merged pull requests:**
 
+- Version bump 0.1.1 [\#6](https://github.com/ItinerisLtd/preflight-extra/pull/6) ([TangRufus](https://github.com/TangRufus))
 - Composer: Fix autoload [\#5](https://github.com/ItinerisLtd/preflight-extra/pull/5) ([TangRufus](https://github.com/TangRufus))
 - Delete CONTRIBUTING.md [\#4](https://github.com/ItinerisLtd/preflight-extra/pull/4) ([TangRufus](https://github.com/TangRufus))
 
