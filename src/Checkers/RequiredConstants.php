@@ -19,6 +19,9 @@ class RequiredConstants extends AbstractChecker
     public const ID = 'extra-required-constants';
     public const DESCRIPTION = 'Ensure required constants are defined.';
 
+    // This is for subclasses.
+    public const DEFAULT_INCLUDES = [];
+
     /**
      * {@inheritdoc}
      *
@@ -28,7 +31,7 @@ class RequiredConstants extends AbstractChecker
      */
     protected function run(Config $config): ResultInterface
     {
-        $includes = $config->compileIncludes([]);
+        $includes = $config->compileIncludes(static::DEFAULT_INCLUDES);
 
         return $this->validator->validate(...$includes);
     }
@@ -42,7 +45,7 @@ class RequiredConstants extends AbstractChecker
      */
     protected function maybeInvalidConfig(Config $config): ?Error
     {
-        return $this->errorIfCompiledIncludesIsEmpty($config, []);
+        return $this->errorIfCompiledIncludesIsEmpty($config, static::DEFAULT_INCLUDES);
     }
 
     /**
