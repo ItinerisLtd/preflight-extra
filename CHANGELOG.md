@@ -1,10 +1,18 @@
 # Change Log
 
-## [0.2.1](https://github.com/ItinerisLtd/preflight-extra/tree/0.2.1) (2018-08-21)
+## [0.2.2](https://github.com/ItinerisLtd/preflight-extra/tree/0.2.2) (2018-08-21)
+[Full Changelog](https://github.com/ItinerisLtd/preflight-extra/compare/0.2.1...0.2.2)
+
+**Merged pull requests:**
+
+- composer update [\#12](https://github.com/ItinerisLtd/preflight-extra/pull/12) ([TangRufus](https://github.com/TangRufus))
+
+## [0.2.1](https://github.com/ItinerisLtd/preflight-extra/tree/0.2.1) (2018-08-20)
 [Full Changelog](https://github.com/ItinerisLtd/preflight-extra/compare/0.2.0...0.2.1)
 
 **Merged pull requests:**
 
+- Version bump 0.2.1 [\#11](https://github.com/ItinerisLtd/preflight-extra/pull/11) ([TangRufus](https://github.com/TangRufus))
 - Allow subclassing [\#10](https://github.com/ItinerisLtd/preflight-extra/pull/10) ([TangRufus](https://github.com/TangRufus))
 
 ## [0.2.0](https://github.com/ItinerisLtd/preflight-extra/tree/0.2.0) (2018-08-20)
