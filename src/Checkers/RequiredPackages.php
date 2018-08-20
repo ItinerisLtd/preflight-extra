@@ -15,7 +15,7 @@ class RequiredPackages extends AbstractChecker
 {
     use CompiledIncludesAwareTrait;
 
-    public const ID = 'required-packages';
+    public const ID = 'extra-required-packages';
     public const DESCRIPTION = 'Ensure required WP CLI packages are installed.';
     public const FAILURE_MESSAGE = 'Required WP CLI packages not found:';
 

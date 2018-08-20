@@ -15,7 +15,7 @@ class ExpectedStatusCodes extends AbstractChecker
 {
     use ValidatorAwareTrait;
 
-    public const ID = 'expected-status-codes';
+    public const ID = 'extra-expected-status-codes';
     public const DESCRIPTION = '**Experimental** Ensure paths return expected status codes.';
 
     /**

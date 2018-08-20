@@ -16,7 +16,7 @@ class RequiredConstants extends AbstractChecker
     use ValidatorAwareTrait;
     use CompiledIncludesAwareTrait;
 
-    public const ID = 'required-constants';
+    public const ID = 'extra-required-constants';
     public const DESCRIPTION = 'Ensure required constants are defined.';
 
     /**

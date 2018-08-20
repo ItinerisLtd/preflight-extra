@@ -20,40 +20,40 @@ $ wp package install itinerisltd/preflight-extra:@stable
 
 ```toml
 # Note: expected-status-codes is experimental.
-[expected-status-codes]
+[extra-expected-status-codes]
 enabled = true # Default is enabled.
-[[expected-status-codes.groups]]
+[[extra-expected-status-codes.groups]]
   code = 404
   paths = [
     '/not-found',
   ]
-[[expected-status-codes.groups]]
+[[extra-expected-status-codes.groups]]
   code = 200
   paths = [
     '/',
     '/hello-world',
   ]
 
-[production-home-url]
+[extra-production-home-url]
 url = 'https://example.com'
 
-[production-site-url]
+[extra-production-site-url]
 url = 'https://example.com/wp' # Maybe same as homr URL
 
-[required-constants]
+[extra-required-constants]
 includes = [
   'WP_ENV',
   'MY_CONSTANT_A',
   'MY_CONSTANT_B',
 ]
 
-[required-packages]
+[extra-required-packages]
 includes = [
   'aaemnnosttv/wp-cli-login-command',
   'itinerisltd/preflight-yoast-seo',
 ]
 
-[required-plugins]
+[extra-required-plugins]
 includes = [
   'sunny',
   'wp-cloudflare-guard',
