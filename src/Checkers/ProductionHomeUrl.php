@@ -11,7 +11,7 @@ use Itineris\Preflight\Results\Error;
 
 class ProductionHomeUrl extends AbstractChecker
 {
-    public const ID = 'production-home-url';
+    public const ID = 'extra-production-home-url';
     public const DESCRIPTION = 'Ensure home URL is on production.';
 
     /**

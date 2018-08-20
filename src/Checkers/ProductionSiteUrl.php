@@ -11,7 +11,7 @@ use Itineris\Preflight\Results\Error;
 
 class ProductionSiteUrl extends AbstractChecker
 {
-    public const ID = 'production-site-url';
+    public const ID = 'extra-production-site-url';
     public const DESCRIPTION = 'Ensure site URL is on production.';
 
     /**

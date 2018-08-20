@@ -15,7 +15,7 @@ class RequiredPlugins extends AbstractChecker
 {
     use CompiledIncludesAwareTrait;
 
-    public const ID = 'required-plugins';
+    public const ID = 'extra-required-plugins';
     public const DESCRIPTION = 'Ensure required plugins are installed.';
     public const FAILURE_MESSAGE = 'Required plugins not found:';
 
