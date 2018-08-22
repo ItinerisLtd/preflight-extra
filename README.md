@@ -19,7 +19,7 @@ $ wp package install itinerisltd/preflight-extra:@stable
 ### preflight.toml
 
 ```toml
-# Note: expected-status-codes is experimental.
+# Note: extra-expected-status-codes is experimental.
 [extra-expected-status-codes]
 enabled = true # Default is enabled.
 [[extra-expected-status-codes.groups]]
