@@ -27,15 +27,10 @@ class RequiredConstantsTest extends Unit
     public function testUsingValidator()
     {
         $constantNames = ['AAA', 'BBB'];
-        $config = Mockery::mock(Config::class);
-        $config->expects('isEnabled')
-               ->withNoArgs()
-               ->andReturnTrue()
-               ->once();
-        $config->expects('compileIncludes')
-               ->with([])
-               ->andReturn($constantNames)
-               ->twice();
+
+        $config = new Config([
+            'includes' => $constantNames,
+        ]);
 
         $expected = Mockery::mock(ResultInterface::class);
         $validator = Mockery::mock(AbstractValidator::class);

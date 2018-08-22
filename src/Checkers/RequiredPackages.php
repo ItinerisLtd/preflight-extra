@@ -17,10 +17,6 @@ class RequiredPackages extends AbstractChecker
 
     public const ID = 'extra-required-packages';
     public const DESCRIPTION = 'Ensure required WP CLI packages are installed.';
-    public const FAILURE_MESSAGE = 'Required WP CLI packages not found:';
-
-    // This is for subclasses.
-    public const DEFAULT_INCLUDES = [];
 
     /**
      * Run the check and return a result.
@@ -48,7 +44,7 @@ class RequiredPackages extends AbstractChecker
         }, $installed);
 
         $missing = array_diff(
-            $config->compileIncludes(static::DEFAULT_INCLUDES),
+            $config->compileIncludes(),
             $installed
         );
 
@@ -56,7 +52,7 @@ class RequiredPackages extends AbstractChecker
             ? ResultFactory::makeSuccess($this)
             : ResultFactory::makeFailure(
                 $this,
-                array_merge([self::FAILURE_MESSAGE], $missing)
+                array_merge(['Required WP CLI packages not found:'], $missing)
             );
     }
 
@@ -69,6 +65,6 @@ class RequiredPackages extends AbstractChecker
      */
     protected function maybeInvalidConfig(Config $config): ?Error
     {
-        return $this->errorIfCompiledIncludesIsEmpty($config, static::DEFAULT_INCLUDES);
+        return $this->errorIfCompiledIncludesIsEmpty($config);
     }
 }
