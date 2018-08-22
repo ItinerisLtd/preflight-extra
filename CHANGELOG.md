@@ -1,10 +1,18 @@
 # Change Log
 
-## [0.2.2](https://github.com/ItinerisLtd/preflight-extra/tree/0.2.2) (2018-08-21)
+## [0.3.0](https://github.com/ItinerisLtd/preflight-extra/tree/0.3.0) (2018-08-22)
+[Full Changelog](https://github.com/ItinerisLtd/preflight-extra/compare/0.2.2...0.3.0)
+
+**Merged pull requests:**
+
+- Update preflight-command to v0.6.0 [\#14](https://github.com/ItinerisLtd/preflight-extra/pull/14) ([TangRufus](https://github.com/TangRufus))
+
+## [0.2.2](https://github.com/ItinerisLtd/preflight-extra/tree/0.2.2) (2018-08-20)
 [Full Changelog](https://github.com/ItinerisLtd/preflight-extra/compare/0.2.1...0.2.2)
 
 **Merged pull requests:**
 
+- Version bump 0.2.2 [\#13](https://github.com/ItinerisLtd/preflight-extra/pull/13) ([TangRufus](https://github.com/TangRufus))
 - composer update [\#12](https://github.com/ItinerisLtd/preflight-extra/pull/12) ([TangRufus](https://github.com/TangRufus))
 
 ## [0.2.1](https://github.com/ItinerisLtd/preflight-extra/tree/0.2.1) (2018-08-20)
