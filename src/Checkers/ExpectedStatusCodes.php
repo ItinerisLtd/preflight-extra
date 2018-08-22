@@ -9,6 +9,7 @@ use Itineris\Preflight\Config;
 use Itineris\Preflight\Extra\Validators\StatusCodes;
 use Itineris\Preflight\ResultFactory;
 use Itineris\Preflight\ResultInterface;
+use Itineris\Preflight\Results\Error;
 use Itineris\Preflight\Validators\AbstractValidator;
 
 class ExpectedStatusCodes extends AbstractChecker
@@ -31,7 +32,6 @@ class ExpectedStatusCodes extends AbstractChecker
      */
     protected function run(Config $config): ResultInterface
     {
-        // TODO: Error if config doesn't make sense!
         $groups = (array) $config->get('groups');
 
         // TODO: Test me!
@@ -53,9 +53,18 @@ class ExpectedStatusCodes extends AbstractChecker
             return $result->getMessages();
         }, $results);
 
-        $messages = array_filter(
-            array_merge(...$messages)
-        );
+        switch (count($messages)) {
+            case 0:
+                $messages = [];
+                break;
+            case 1:
+                $messages = $messages[0];
+                break;
+            default:
+                $messages = array_merge(...$messages);
+        }
+
+        $messages = array_filter($messages);
 
         if (! empty($messages)) {
             return ResultFactory::makeFailure(
@@ -65,6 +74,22 @@ class ExpectedStatusCodes extends AbstractChecker
         }
 
         return ResultFactory::makeSuccess($this);
+    }
+
+    /**
+     * Before actually run the check, check the config is valid.
+     *
+     * @param Config $config The config instance.
+     *
+     * @return Error|null
+     */
+    protected function maybeInvalidConfig(Config $config): ?Error
+    {
+        $groups = (array) $config->get('groups');
+
+        return empty($groups)
+            ? ResultFactory::makeError($this, ['***** Experimental *****', 'Groups is empty.'])
+            : null;
     }
 
     /**
