@@ -1,10 +1,18 @@
 # Change Log
 
+## [0.3.1](https://github.com/ItinerisLtd/preflight-extra/tree/0.3.1) (2018-08-22)
+[Full Changelog](https://github.com/ItinerisLtd/preflight-extra/compare/0.3.0...0.3.1)
+
+**Merged pull requests:**
+
+- ExpectedStatusCodes: Fix errors when less than 2 groups [\#16](https://github.com/ItinerisLtd/preflight-extra/pull/16) ([TangRufus](https://github.com/TangRufus))
+
 ## [0.3.0](https://github.com/ItinerisLtd/preflight-extra/tree/0.3.0) (2018-08-22)
 [Full Changelog](https://github.com/ItinerisLtd/preflight-extra/compare/0.2.2...0.3.0)
 
 **Merged pull requests:**
 
+- Version bump 0.3.0 [\#15](https://github.com/ItinerisLtd/preflight-extra/pull/15) ([TangRufus](https://github.com/TangRufus))
 - Update preflight-command to v0.6.0 [\#14](https://github.com/ItinerisLtd/preflight-extra/pull/14) ([TangRufus](https://github.com/TangRufus))
 
 ## [0.2.2](https://github.com/ItinerisLtd/preflight-extra/tree/0.2.2) (2018-08-20)
