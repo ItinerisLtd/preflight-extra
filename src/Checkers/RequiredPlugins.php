@@ -17,10 +17,6 @@ class RequiredPlugins extends AbstractChecker
 
     public const ID = 'extra-required-plugins';
     public const DESCRIPTION = 'Ensure required plugins are installed.';
-    public const FAILURE_MESSAGE = 'Required plugins not found:';
-
-    // This is for subclasses.
-    public const DEFAULT_INCLUDES = [];
 
     /**
      * Run the check and return a result.
@@ -48,7 +44,7 @@ class RequiredPlugins extends AbstractChecker
         }, $installedPlugins);
 
         $missingPlugins = array_diff(
-            $config->compileIncludes(static::DEFAULT_INCLUDES),
+            $config->compileIncludes(),
             $installedPlugins
         );
 
@@ -56,7 +52,7 @@ class RequiredPlugins extends AbstractChecker
             ? ResultFactory::makeSuccess($this)
             : ResultFactory::makeFailure(
                 $this,
-                array_merge([self::FAILURE_MESSAGE], $missingPlugins)
+                array_merge(['Required plugins not found:'], $missingPlugins)
             );
     }
 
@@ -69,6 +65,6 @@ class RequiredPlugins extends AbstractChecker
      */
     protected function maybeInvalidConfig(Config $config): ?Error
     {
-        return $this->errorIfCompiledIncludesIsEmpty($config, static::DEFAULT_INCLUDES);
+        return $this->errorIfCompiledIncludesIsEmpty($config);
     }
 }
